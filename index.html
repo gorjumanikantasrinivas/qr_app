@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QR Styling Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+</head>
+<body>
+
+  <!-- 🔐 Login Page -->
+  <div id="loginPage" class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p class="hint">Use: admin / 1234</p>
+  </div>
+
+  <!-- 🚀 App Page -->
+  <div id="appPage" class="container" style="display:none;">
+    <h1>QR Code Generator</h1>
+
+    <input type="text" id="qrText" placeholder="Enter text or URL" />
+
+    <!-- 🎨 Customization -->
+    <div class="customize">
+      <label>Color:</label>
+      <input type="color" id="qrColor" value="#000000" />
+
+      <label>Logo:</label>
+      <input type="file" id="logoInput" accept="image/*" />
+    </div>
+
+    <!-- QR Output -->
+    <div id="qrBox"></div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button onclick="generateQR()">Generate</button>
+      <button onclick="downloadQR()">Download</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
